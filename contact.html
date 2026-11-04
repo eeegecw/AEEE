@@ -24,7 +24,7 @@
       <h1>Send us a message</h1>
       <p>It goes straight to the committee. We'll reply by email.</p>
     </div>
-    <form id="committeeMessageForm" class="committee-form">
+    <form id="committeeMessageForm" class="committee-form" action="https://dropgram.anokhagecw.workers.dev//f/fk_DO3AcdoGzSkDhaxS-kU1gw" method="POST">
       <fieldset class="topic-field">
         <legend>WHAT'S IT ABOUT?</legend>
         <div class="topic-options" role="group" aria-label="Message topic">
@@ -72,13 +72,7 @@ topicButtons.forEach(button => button.addEventListener("click", () => {
   });
   topicInput.value = button.dataset.topic;
 }));
-const messageForm = document.getElementById("committeeMessageForm");
-const formStatus = document.getElementById("formStatus");
-messageForm.addEventListener("submit", event => {
-  event.preventDefault();
-  if (!messageForm.reportValidity()) return;
-  formStatus.textContent = "The contact page is ready. To deliver messages directly to the committee, its official email or a form endpoint needs to be connected.";
-});
+// The browser submits the form directly to the configured Dropgram endpoint.
 </script>
 </body>
 </html>
