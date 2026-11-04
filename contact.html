@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0d0f0d">
+<meta name="description" content="Get in touch with the Association of Electrical and Electronics Engineers at Government Engineering College Wayanad.">
+<title>Contact AEEE | GEC Wayanad</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="contact-page-body">
+<header class="header">
+  <a class="brand" href="index.html#home"><span class="brand-mark">EEE</span><span>AEEE<small>GEC WAYANAD</small></span></a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <nav id="navigation"><a href="index.html#home">Home</a><a href="index.html#about">About</a><a href="index.html#team">Our Team</a><a class="active" href="contact.html">Contact</a></nav>
+</header>
+<main class="contact-page-main">
+  <section class="message-card">
+    <div class="message-card-heading">
+      <span class="message-kicker">AEEE · GEC WAYANAD</span>
+      <h1>Send us a message</h1>
+      <p>It goes straight to the committee. We'll reply by email.</p>
+    </div>
+    <form id="committeeMessageForm" class="committee-form">
+      <fieldset class="topic-field">
+        <legend>WHAT'S IT ABOUT?</legend>
+        <div class="topic-options" role="group" aria-label="Message topic">
+          <button type="button" class="topic-option selected" aria-pressed="true" data-topic="A concern">A concern</button>
+          <button type="button" class="topic-option" aria-pressed="false" data-topic="An idea">An idea</button>
+          <button type="button" class="topic-option" aria-pressed="false" data-topic="Joining AEEE">Joining AEEE</button>
+          <button type="button" class="topic-option" aria-pressed="false" data-topic="Something else">Something else</button>
+        </div>
+        <input type="hidden" id="messageTopic" name="topic" value="A concern">
+      </fieldset>
+      <div class="form-grid">
+        <label class="form-field">YOUR NAME
+          <input type="text" name="name" autocomplete="name" required>
+        </label>
+        <label class="form-field">EMAIL
+          <input type="email" name="email" autocomplete="email" required>
+        </label>
+        <label class="form-field">PHONE
+          <input type="tel" name="phone" autocomplete="tel">
+        </label>
+        <label class="form-field">BRANCH &amp; YEAR <span>(optional)</span>
+          <input type="text" name="branch" placeholder="e.g. EEE, S3">
+        </label>
+      </div>
+      <p class="form-hint">Give us an email, a phone number, or both.</p>
+      <label class="form-field message-field">MESSAGE
+        <textarea name="message" rows="6" required></textarea>
+      </label>
+      <button class="send-message-button" type="submit">Send message <span aria-hidden="true">↗</span></button>
+      <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+  <p class="contact-page-back"><a href="index.html">← Back to AEEE home</a></p>
+</main>
+<footer><a class="brand footer-brand" href="index.html#home"><span class="brand-mark">EEE</span><span>AEEE<small>GEC WAYANAD</small></span></a><span>© <span id="year"></span> AEEE · GOVERNMENT ENGINEERING COLLEGE WAYANAD</span><a href="index.html#home">BACK TO HOME ↑</a></footer>
+<script src="script.js"></script>
+<script>
+const topicButtons = document.querySelectorAll(".topic-option");
+const topicInput = document.getElementById("messageTopic");
+topicButtons.forEach(button => button.addEventListener("click", () => {
+  topicButtons.forEach(item => {
+    const selected = item === button;
+    item.classList.toggle("selected", selected);
+    item.setAttribute("aria-pressed", String(selected));
+  });
+  topicInput.value = button.dataset.topic;
+}));
+const messageForm = document.getElementById("committeeMessageForm");
+const formStatus = document.getElementById("formStatus");
+messageForm.addEventListener("submit", event => {
+  event.preventDefault();
+  if (!messageForm.reportValidity()) return;
+  formStatus.textContent = "The contact page is ready. To deliver messages directly to the committee, its official email or a form endpoint needs to be connected.";
+});
+</script>
+</body>
+</html>
