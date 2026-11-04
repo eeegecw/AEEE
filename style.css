@@ -65,3 +65,32 @@
 /* AEEE logo in header and footer */
 .brand-mark-image{display:block;width:48px;height:48px;flex:0 0 48px;object-fit:contain;filter:brightness(0);}
 .footer-brand .brand-mark-image{width:44px;height:44px;flex-basis:44px;}
+
+
+/* Contact page — match the dark AEEE homepage theme */
+.contact-page-body{background:#0d0f0d;color:#f0efe9}
+.contact-page-main{max-width:1040px;padding-top:clamp(42px,7vw,86px);padding-bottom:72px}
+.message-card{background:transparent;color:#f0efe9;border:1px solid rgba(240,239,233,.13);border-radius:22px;padding:clamp(26px,5vw,58px);box-shadow:0 24px 80px rgba(0,0,0,.18);position:relative;overflow:hidden}
+.message-card:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.13;background-image:radial-gradient(#fff 1px,transparent 1px);background-size:24px 24px;mask-image:linear-gradient(transparent,#000 18%,#000 82%,transparent)}
+.message-card>*{position:relative}
+.message-kicker{color:var(--lime);font-size:10px;letter-spacing:.2em}
+.message-card-heading h1{font:600 clamp(42px,6vw,72px)/1.04 "Oswald",sans-serif;letter-spacing:-.025em;color:#f0efe9;margin:0 0 14px;text-transform:uppercase}
+.message-card-heading p{font-size:15px;color:#b8bbb0;margin:0 0 38px}
+.topic-field legend,.form-field{color:#c5c8bd}
+.topic-field legend{font-size:10px;letter-spacing:.18em}
+.topic-option{border:1px solid rgba(240,239,233,.2);background:#171a16;color:#d8dbd0;border-radius:999px;padding:12px 20px;font:500 14px "DM Sans",sans-serif}
+.topic-option:hover{border-color:var(--lime);color:var(--lime)}
+.topic-option.selected{background:var(--lime);color:#151914;border-color:var(--lime);font-weight:700}
+.form-field{font-size:10px;letter-spacing:.16em}
+.form-field>span{color:#92978b;font-size:12px}
+.form-field input,.form-field textarea{border:1px solid rgba(240,239,233,.16);border-radius:12px;background:#171a16;color:#f0efe9;padding:15px 18px;font:400 15px "DM Sans",sans-serif;box-shadow:none}
+.form-field input:focus,.form-field textarea:focus{border-color:var(--lime);box-shadow:0 0 0 3px rgba(197,246,90,.12)}
+.form-field input::placeholder,.form-field textarea::placeholder{color:#858b7d}
+.form-hint{font-size:13px;color:#a6aa9d}
+.send-message-button{background:var(--lime);color:#151914;border-radius:999px;padding:7px 8px 7px 23px;font:700 11px "DM Sans",sans-serif;letter-spacing:.12em;text-transform:uppercase}
+.send-message-button:hover{background:#dcff91}
+.send-message-button span{background:#151914;color:var(--lime)}
+.form-status{color:#b8bbb0}
+.contact-page-back a{color:var(--lime)}
+.contact-page-body footer{background:#f0efe9;color:#171914}
+@media(max-width:620px){.message-card{border-radius:18px;padding:25px 19px}.message-card-heading h1{font-size:clamp(38px,10vw,54px)}.topic-option{padding:10px 15px;font-size:13px}}
