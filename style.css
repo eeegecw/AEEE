@@ -28,3 +28,36 @@
 @media(max-width:1050px){.member-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.member-main{gap:15px}.member-photo{flex-basis:130px;width:130px;height:148px}}
 @media(max-width:620px){.member-grid{grid-template-columns:1fr;gap:14px}.member-group{margin-top:42px}.member-main{min-height:0;padding:15px;gap:17px}.member-photo{flex-basis:132px;width:132px;height:148px}.member-info h3{font-size:22px}.member-contact{padding-left:15px}.member-contact>span{font-size:8px}}
 
+
+
+/* Dedicated AEEE contact page */
+.contact-page-body{background:#0d0f0d;color:#f0efe9;min-height:100vh}
+.contact-page-main{width:100%;max-width:920px;margin:0 auto;padding:clamp(34px,7vw,78px) 22px 64px}
+.message-card{background:#f5f6f7;color:#17191d;border-radius:34px;padding:clamp(26px,6vw,64px);box-shadow:0 24px 80px rgba(0,0,0,.2)}
+.message-card-heading h1{font:600 clamp(30px,4vw,42px)/1.12 "DM Sans",sans-serif;letter-spacing:-.045em;margin:0 0 10px;color:#101216}
+.message-kicker{display:block;color:#7e858e;font-size:9px;font-weight:700;letter-spacing:.17em;margin-bottom:17px}
+.message-card-heading p{font-size:16px;color:#69717b;margin:0 0 34px;line-height:1.6}
+.committee-form{display:block}
+.topic-field{border:0;padding:0;margin:0 0 32px;min-width:0}
+.topic-field legend,.form-field{font-size:12px;letter-spacing:.09em;font-weight:600;color:#4e5661}
+.topic-options{display:flex;flex-wrap:wrap;gap:10px;margin-top:15px}
+.topic-option{border:1px solid #dfe2e6;background:#fff;color:#4b535e;border-radius:999px;padding:12px 20px;font:500 15px "DM Sans",sans-serif;cursor:pointer;transition:background .18s ease,color .18s ease,border-color .18s ease}
+.topic-option.selected{background:#17191d;color:#fff;border-color:#17191d}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px 16px}
+.form-field{display:flex;flex-direction:column;gap:12px;min-width:0}
+.form-field>span{display:inline;color:#9299a2;font-weight:400;letter-spacing:0;text-transform:none}
+.form-field input,.form-field textarea{width:100%;border:1px solid #dfe2e6;border-radius:16px;background:#fff;color:#17191d;padding:14px 18px;font:400 16px "DM Sans",sans-serif;letter-spacing:0;outline:none;transition:border-color .18s ease,box-shadow .18s ease}
+.form-field input{height:60px}
+.form-field textarea{min-height:180px;resize:vertical;line-height:1.6}
+.form-field input:focus,.form-field textarea:focus{border-color:#8b949f;box-shadow:0 0 0 3px rgba(80,91,105,.1)}
+.form-field input::placeholder,.form-field textarea::placeholder{color:#a2a8b0}
+.form-hint{font-size:14px;color:#969da6;margin:13px 0 29px}
+.message-field{margin-bottom:29px}
+.send-message-button{display:inline-flex;align-items:center;gap:25px;border:0;border-radius:999px;background:#17191d;color:#fff;padding:7px 8px 7px 24px;font:700 15px "DM Sans",sans-serif;cursor:pointer;transition:transform .18s ease,background .18s ease}
+.send-message-button:hover{transform:translateY(-2px);background:#30343a}
+.send-message-button span{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:#fff;color:#17191d;font-size:19px}
+.form-status{font-size:13px;color:#626c77;line-height:1.6;margin:15px 0 0;max-width:540px}
+.contact-page-back{margin:24px 4px 0;font-size:13px}
+.contact-page-back a{color:#c5f65a}
+.contact-page-body footer{margin-top:0}
+@media(max-width:620px){.contact-page-main{padding:24px 13px 42px}.message-card{border-radius:24px;padding:25px 19px}.message-card-heading p{font-size:14px;margin-bottom:27px}.form-grid{grid-template-columns:1fr;gap:20px}.topic-options{gap:8px}.topic-option{padding:10px 15px;font-size:13px}.form-field input{height:56px}.form-field textarea{min-height:160px}.form-hint{font-size:12px}.send-message-button{font-size:14px}}
