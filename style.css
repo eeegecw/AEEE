@@ -27,3 +27,12 @@
 .member-contact a:hover{background:#dcff91}
 @media(max-width:1050px){.member-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.member-main{gap:15px}.member-photo{flex-basis:130px;width:130px;height:148px}}
 @media(max-width:620px){.member-grid{grid-template-columns:1fr;gap:14px}.member-group{margin-top:42px}.member-main{min-height:0;padding:15px;gap:17px}.member-photo{flex-basis:132px;width:132px;height:148px}.member-info h3{font-size:22px}.member-contact{padding-left:15px}.member-contact>span{font-size:8px}}
+
+
+/* New AEEE hero artwork */
+.hero.hero-banner{min-height:0;height:auto;aspect-ratio:1511/416;padding:0;display:block;overflow:hidden;background:#0d0f0d;position:relative}
+.hero-banner-image{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.hero-banner-link{position:absolute;left:50%;bottom:clamp(12px,3vw,32px);transform:translateX(-50%);display:inline-flex;align-items:center;gap:22px;padding:13px 18px;background:#c5f65a;color:#111510;font-size:10px;font-weight:800;letter-spacing:.13em;white-space:nowrap;opacity:0;transition:opacity .2s ease}
+.hero-banner:hover .hero-banner-link,.hero-banner-link:focus-visible{opacity:1}
+.hero-banner-link span{font-size:18px}
+@media(max-width:760px){.hero.hero-banner{aspect-ratio:1511/416;min-height:0;height:auto;padding:0}.hero-banner-image{object-fit:contain}.hero-banner-link{opacity:1;bottom:9px;padding:9px 12px;font-size:8px}}
