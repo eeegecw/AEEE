@@ -61,3 +61,7 @@
 .contact-page-back a{color:#c5f65a}
 .contact-page-body footer{margin-top:0}
 @media(max-width:620px){.contact-page-main{padding:24px 13px 42px}.message-card{border-radius:24px;padding:25px 19px}.message-card-heading p{font-size:14px;margin-bottom:27px}.form-grid{grid-template-columns:1fr;gap:20px}.topic-options{gap:8px}.topic-option{padding:10px 15px;font-size:13px}.form-field input{height:56px}.form-field textarea{min-height:160px}.form-hint{font-size:12px}.send-message-button{font-size:14px}}
+
+/* AEEE logo in header and footer */
+.brand-mark-image{display:block;width:48px;height:48px;flex:0 0 48px;object-fit:contain;filter:brightness(0);}
+.footer-brand .brand-mark-image{width:44px;height:44px;flex-basis:44px;}
