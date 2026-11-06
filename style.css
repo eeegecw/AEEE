@@ -94,3 +94,13 @@
 .contact-page-back a{color:var(--lime)}
 .contact-page-body footer{background:#f0efe9;color:#171914}
 @media(max-width:620px){.message-card{border-radius:18px;padding:25px 19px}.message-card-heading h1{font-size:clamp(38px,10vw,54px)}.topic-option{padding:10px 15px;font-size:13px}}
+
+/* Compact phone and WhatsApp actions for the first three Core Team cards */
+.member-contact-actions{min-height:72px;padding:12px 16px 12px 18px;background:#fff;border-top:1px solid rgba(0,0,0,.08)}
+.member-contact-actions .contact-number{font-size:18px;font-weight:500;letter-spacing:0;color:#171914}
+.member-contact-actions .contact-actions{display:flex;align-items:center;gap:10px}
+.member-contact-actions a.contact-icon{width:50px;height:50px;min-width:50px;padding:0;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:#17191c;color:#fff;transition:transform .18s ease,background .18s ease}
+.member-contact-actions a.contact-icon svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.member-contact-actions a.contact-whatsapp{background:#fff;color:#171914;border:1px solid #d9d9d9}
+.member-contact-actions a.contact-icon:hover{transform:translateY(-2px);background:#c5f65a;color:#151914}
+@media(max-width:620px){.member-contact-actions{min-height:64px;padding:10px 12px}.member-contact-actions .contact-number{font-size:16px}.member-contact-actions a.contact-icon{width:44px;height:44px;min-width:44px}}
