@@ -504,3 +504,12 @@
   .member-card.particle-portrait-card{transition:none}
   .member-card.particle-portrait-card:hover{transform:none}
 }
+
+
+/* Prof. Saritha portrait with the AEEE particle overlay */
+.member-card.particle-portrait-card .member-photo.saritha-photo{
+  background-image:url("assets/saritha-photo.jpg");
+  background-size:cover;
+  background-position:center 34%;
+  background-repeat:no-repeat;
+}
