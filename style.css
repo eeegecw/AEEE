@@ -916,3 +916,17 @@
   .member-grid:has(>.particle-portrait-card){grid-auto-rows:auto}
   .member-grid:has(>.particle-portrait-card)>.member-card.particle-portrait-card{height:auto}
 }
+
+
+/* Restore natural card sizing for the remaining core-team members */
+.member-grid:has(>.particle-portrait-card){
+  grid-auto-rows:auto;
+}
+.member-grid:has(>.particle-portrait-card)>.member-card:not(.particle-portrait-card){
+  height:auto;
+  align-self:start;
+}
+.member-grid:has(>.particle-portrait-card)>.member-card:not(.particle-portrait-card)>.member-main{
+  flex:initial;
+  min-height:184px;
+}
