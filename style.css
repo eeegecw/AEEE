@@ -954,3 +954,15 @@
  .member-card.particle-portrait-card .member-name-row .contact-icon svg{width:14px;height:14px}
  .member-card.particle-portrait-card .member-name-row h3{font-size:clamp(16px,4.2vw,21px)}
 }
+
+
+/* Keep both contact actions grouped together at the left of each name */
+.member-card.particle-portrait-card .member-name-row{
+  justify-content:flex-start;
+}
+.member-card.particle-portrait-card .member-name-row .contact-whatsapp{
+  order:0;
+}
+.member-card.particle-portrait-card .member-name-row h3{
+  order:1;
+}
