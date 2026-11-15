@@ -286,3 +286,20 @@
 .hero-link:active{transform:translateY(0) scale(.985)}
 @media(max-width:620px){.hero-link{min-width:245px;min-height:64px;padding:0 20px;gap:24px}}
 @media(prefers-reduced-motion:reduce){.hero-link{translate:none;rotate:none;transition:none}.hero-link span{transition:none}}
+
+
+/* Interactive depth and soft lime halo for the AEEE hero logo */
+.hero-mark{
+  transform:perspective(700px) translate3d(var(--logo-tx,0px),var(--logo-ty,0px),0) rotateX(var(--logo-rx,0deg)) rotateY(var(--logo-ry,0deg));
+  transform-style:preserve-3d;
+  filter:drop-shadow(0 0 0 rgba(197,246,90,0));
+  transition:transform .24s cubic-bezier(.2,.75,.25,1),filter .3s ease;
+  will-change:transform,filter;
+  cursor:default;
+}
+.hero-mark:hover{
+  filter:drop-shadow(0 0 10px rgba(197,246,90,var(--logo-glow,.12)));
+}
+@media(prefers-reduced-motion:reduce){
+  .hero-mark{transform:none!important;transition:none;will-change:auto}
+}
