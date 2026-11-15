@@ -564,3 +564,81 @@
   .footer-bottom{font-size:8px;letter-spacing:.07em;flex-direction:column;gap:13px}
 }
 @media(prefers-reduced-motion:reduce){.footer-cta,.footer-cta span,.footer-links>a{transition:none}}
+
+
+/* Compact three-part footer inspired by the supplied Northeast Tomato reference */
+.site-footer{
+  display:block;
+  padding:0 clamp(14px,3.5vw,48px);
+  background:var(--bg);
+  color:#24271f;
+}
+.footer-strip{
+  min-height:174px;
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  align-items:center;
+  gap:28px;
+  padding:28px clamp(22px,4vw,56px);
+  background:#f0efe9;
+  border-right:8px solid var(--lime);
+}
+.footer-side{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  font-family:"Oswald",sans-serif;
+  font-size:10px;
+  line-height:1.45;
+  font-weight:600;
+  letter-spacing:.15em;
+  color:#535b3b;
+}
+.footer-side em{font-style:normal;color:#8bad39;margin-top:4px}
+.footer-right{text-align:right;align-items:flex-end}
+.footer-right a{color:#171914;transition:color .2s ease}
+.footer-right a:hover{color:#86a832}
+.footer-center-brand{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:13px;
+  color:#11140e;
+  font-family:"Oswald",sans-serif;
+  font-size:clamp(25px,3vw,36px);
+  font-weight:700;
+  letter-spacing:.04em;
+  white-space:nowrap;
+}
+.footer-center-brand img{
+  width:clamp(58px,6vw,82px);
+  height:clamp(58px,6vw,82px);
+  object-fit:contain;
+  filter:brightness(0);
+}
+.footer-center-brand small{
+  display:block;
+  font:700 9px "DM Sans",sans-serif;
+  letter-spacing:.19em;
+  color:#77786f;
+  margin-top:3px;
+}
+@media(max-width:700px){
+  .site-footer{padding:0 12px}
+  .footer-strip{
+    min-height:0;
+    grid-template-columns:1fr 1fr;
+    gap:25px 12px;
+    padding:25px 18px;
+    border-right-width:5px;
+  }
+  .footer-center-brand{grid-column:1/-1;grid-row:1;justify-self:center}
+  .footer-center-brand img{width:54px;height:54px}
+  .footer-side{font-size:8px;letter-spacing:.09em;gap:6px}
+  .footer-right{align-items:flex-end}
+}
+@media(max-width:370px){
+  .footer-strip{padding:22px 12px}
+  .footer-side{font-size:7px;letter-spacing:.07em}
+  .footer-center-brand{font-size:24px;gap:8px}
+}
