@@ -217,3 +217,23 @@
 @media(prefers-reduced-motion:reduce){
   .hero-link,.hero-link span{transition:none}
 }
+
+
+/* Dynamic magnetic response for the pill CTA */
+.hero-link{
+  translate:var(--cta-x,0px) var(--cta-y,0px);
+  rotate:var(--cta-tilt,0deg);
+  will-change:translate,rotate;
+  transition:translate .22s cubic-bezier(.2,.75,.25,1),rotate .22s ease,transform .28s cubic-bezier(.2,.75,.25,1),box-shadow .28s ease,background .28s ease;
+}
+.hero-link span{
+  transition:transform .35s cubic-bezier(.2,.75,.25,1),background .3s ease,color .3s ease,box-shadow .3s ease;
+}
+.hero-link:hover span,.hero-link:focus-visible span{
+  transform:translateX(4px) rotate(-8deg);
+  box-shadow:0 3px 12px rgba(0,0,0,.22);
+}
+.hero-link:active span{transform:scale(.92)}
+@media(prefers-reduced-motion:reduce){
+  .hero-link{translate:none;rotate:none;will-change:auto}
+}
