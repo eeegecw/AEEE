@@ -966,3 +966,16 @@
 .member-card.particle-portrait-card .member-name-row h3{
   order:1;
 }
+
+
+/* Keep both contact actions together at the right end of each member name row */
+.member-card.particle-portrait-card .member-name-row{
+  justify-content:flex-start;
+}
+.member-card.particle-portrait-card .member-name-row h3{
+  order:0;
+  margin-right:auto;
+}
+.member-card.particle-portrait-card .member-name-row .contact-icon{
+  order:1;
+}
