@@ -893,3 +893,26 @@
 @media(prefers-reduced-motion:reduce){
   .message-card>.contact-dot-canvas{opacity:.75}
 }
+
+
+/* Align the three core particle cards into one clean row */
+.member-grid:has(>.particle-portrait-card){
+  align-items:stretch;
+  grid-auto-rows:1fr;
+}
+.member-grid:has(>.particle-portrait-card)>.member-card.particle-portrait-card{
+  align-self:stretch;
+  height:100%;
+  margin-top:0;
+}
+.member-grid:has(>.particle-portrait-card)>.member-card.particle-portrait-card>.member-main{
+  flex:1 1 auto;
+}
+@media(max-width:1050px){
+  .member-grid:has(>.particle-portrait-card){align-items:stretch}
+  .member-grid:has(>.particle-portrait-card)>.member-card.particle-portrait-card{margin-top:0}
+}
+@media(max-width:620px){
+  .member-grid:has(>.particle-portrait-card){grid-auto-rows:auto}
+  .member-grid:has(>.particle-portrait-card)>.member-card.particle-portrait-card{height:auto}
+}
