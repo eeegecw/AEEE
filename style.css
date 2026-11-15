@@ -303,3 +303,114 @@
 @media(prefers-reduced-motion:reduce){
   .hero-mark{transform:none!important;transition:none;will-change:auto}
 }
+
+
+/* AEEE leadership cards — animated particle-card treatment */
+.member-card.particle-card{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  background:linear-gradient(135deg,#171c15 0%,#121711 72%,#151a13 100%);
+  border:1px solid rgba(197,246,90,.19);
+  border-radius:19px;
+  box-shadow:0 12px 34px rgba(0,0,0,.16);
+  transition:transform .35s cubic-bezier(.2,.75,.25,1),border-color .35s ease,box-shadow .35s ease;
+}
+.member-card.particle-card .member-particles{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  z-index:1;
+  pointer-events:none;
+}
+.member-card.particle-card>.member-main,
+.member-card.particle-card>.member-contact{
+  position:relative;
+  z-index:2;
+}
+.member-card.particle-card>.member-main{
+  background:transparent;
+  min-height:238px;
+  padding:22px;
+  gap:22px;
+}
+.member-card.particle-card>.member-contact{
+  min-height:82px;
+  padding:13px 20px;
+  background:rgba(10,14,10,.48);
+  border-top:1px solid rgba(240,239,233,.11);
+}
+.member-card.particle-card .member-photo{
+  flex-basis:clamp(112px,12vw,156px);
+  width:clamp(112px,12vw,156px);
+  height:clamp(144px,14vw,194px);
+  border-radius:15px;
+  background-color:rgba(197,246,90,.07);
+  box-shadow:0 0 0 1px rgba(197,246,90,.28),0 8px 24px rgba(0,0,0,.18);
+}
+.member-card.particle-card .member-role{
+  color:var(--lime);
+  font-size:11px;
+  letter-spacing:.17em;
+}
+.member-card.particle-card .member-info h3{
+  font-size:clamp(21px,2vw,29px);
+  line-height:1.12;
+  margin:11px 0 13px;
+}
+.member-card.particle-card .member-dept{
+  font-size:9px;
+  letter-spacing:.14em;
+}
+.member-card.particle-card .member-contact .contact-number{
+  font-size:clamp(14px,1.3vw,19px);
+  color:#f0efe9;
+  letter-spacing:-.015em;
+}
+.member-card.particle-card .member-contact-actions .contact-actions{display:flex;align-items:center;gap:11px}
+.member-card.particle-card .member-contact-actions a.contact-icon{
+  width:56px;
+  height:56px;
+  min-width:56px;
+  padding:0;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:var(--lime);
+  color:#11140e;
+  border:1px solid var(--lime);
+  transition:transform .25s ease,background .25s ease,color .25s ease,border-color .25s ease;
+}
+.member-card.particle-card .member-contact-actions a.contact-whatsapp{
+  background:transparent;
+  color:#f0efe9;
+  border-color:rgba(240,239,233,.25);
+}
+.member-card.particle-card .member-contact-actions a.contact-icon svg{width:23px;height:23px}
+.member-card.particle-card .member-contact-actions a.contact-icon:hover{
+  transform:translateY(-3px) scale(1.04);
+  background:#dcff91;
+  color:#11140e;
+  border-color:#dcff91;
+}
+.member-card.particle-card:hover{
+  transform:translateY(-6px);
+  border-color:rgba(197,246,90,.55);
+  box-shadow:0 20px 48px rgba(0,0,0,.28),0 0 24px rgba(197,246,90,.06);
+}
+@media(max-width:1050px){
+  .member-card.particle-card>.member-main{min-height:210px;padding:18px;gap:17px}
+  .member-card.particle-card .member-photo{flex-basis:120px;width:120px;height:155px}
+}
+@media(max-width:620px){
+  .member-card.particle-card>.member-main{min-height:180px;padding:16px;gap:16px}
+  .member-card.particle-card .member-photo{flex-basis:112px;width:112px;height:140px}
+  .member-card.particle-card>.member-contact{min-height:72px;padding:10px 14px}
+  .member-card.particle-card .member-contact-actions a.contact-icon{width:48px;height:48px;min-width:48px}
+}
+@media(prefers-reduced-motion:reduce){
+  .member-card.particle-card,.member-card.particle-card .contact-icon{transition:none}
+  .member-card.particle-card:hover{transform:none}
+}
