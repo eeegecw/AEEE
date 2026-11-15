@@ -106,3 +106,9 @@
 @media(max-width:620px){.member-contact-actions{min-height:64px;padding:10px 12px}.member-contact-actions .contact-number{font-size:16px}.member-contact-actions a.contact-icon{width:44px;height:44px;min-width:44px}}
 
 
+
+
+/* Mouse-responsive dotted texture in the hero */
+.hero-glow{background:none;pointer-events:none;overflow:hidden;}
+.hero-dot-canvas{position:absolute;inset:0;display:block;width:100%;height:100%;}
+@media(prefers-reduced-motion:reduce){.hero-dot-canvas{opacity:.8}}
